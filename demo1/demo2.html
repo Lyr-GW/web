@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <lvv v-for="item in items" v-bind:l="item"></lvv>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js"></script>
+    <script>
+        Vue.component('lvv', {
+            props: ['l'],
+            template: '<li>{{l}}</li>'
+        });
+
+
+        var vm = new Vue({
+            el: "#app",
+            data: {
+                items: [11, 12, 13]
+            }
+        });
+    </script>
+</body>
+
+</html>
