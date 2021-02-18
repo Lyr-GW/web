@@ -6,6 +6,6 @@
        name:'Content',
     }
 </script>
-<style scoped>
+<style>
 
 </style>
